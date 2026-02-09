@@ -1,40 +1,5 @@
-
 //** @author AythamiReyes */
 
-public enum EstadoPedido {
-    EN_PREPARACION,
-    LISTO_PARA_ENTREGAR,
-    ENTREGADO
-}
-
-public class Articulo {
-
-    private String nombre;
-    private int cantidad;
-    private double precioUnidad;
-
-    public Articulo(String nombre, int cantidad, double precioUnidad) {
-        this.nombre = nombre;
-        this.cantidad = cantidad;
-        this.precioUnidad = precioUnidad;
-    }
-
-    public double getSubtotal() {
-        return cantidad * precioUnidad;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    public double getPrecioUnidad() {
-        return precioUnidad;
-    }
-}
 public class Pedido {
     private static int contadorIds = 1;
     private int id;
