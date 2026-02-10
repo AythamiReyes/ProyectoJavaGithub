@@ -1,5 +1,4 @@
 //** @author AythamiReyes */
-
 public class Pedido {
     private static int contadorIds = 1;
     private int id;

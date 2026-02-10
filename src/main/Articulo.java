@@ -27,22 +27,5 @@ public class Articulo {
     public double getPrecioUnidad() {
         return precioUnidad;
     }
-
-    public boolean agregarArticulo(Articulo articulo){
-        if (numArticulos >= 5){
-            System.out.println("No se pueden agregar más artículos.");
-            return false;
-        }
-        articulos[numArticulos++] = articulo;
-        numArticulos++;
-        return true;
-    }
-
-    public double calcularTotal() {
-        double total = 0;
-        for (int i = 0; i < numArticulos; i++){
-            total += articulos[i].getSubtotal();
-        }
-        return total;
-    }
+    
 }
