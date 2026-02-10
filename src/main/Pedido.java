@@ -20,7 +20,7 @@ public class Pedido {
             System.out.println("No se pueden agregar más artículos.");
             return false;
         }
-        articulos[numArticulos++] = articulo;
+        articulos[numArticulos] = articulo;
         numArticulos++;
         return true;
     }
@@ -33,4 +33,23 @@ public class Pedido {
         return total;
     }
     
+    //** @author AlejandroAcosta */
+    // Gestion para el flujo de estados del pedido//
+    public void avanzarEstado(){
+        if (this.estado == EstadoPedido.EN_PREPARACION){
+            this.estado = EstadoPedido.LISTO_PARA_ENTREGAR;
+            System.out.println("El pedido ahora esta listo para entregar.");
+        } else if (this.estado == EstadoPedido.LISTO_PARA_ENTREGAR){
+            this.estado = EstadoPedido.ENTREGADO;
+            System.out.println("El pedido ha sido entregado.");
+        } else {
+            System.out.println("El pedido ya fue entregado con anterioridad.");
+        }
+    }
+    
+    //** @author AlejandroAcosta */
+    // Getters necesarios
+    public EstadoPedido getEstado() { return estado; }
+    public int getId() { return id;
+    }
 }
