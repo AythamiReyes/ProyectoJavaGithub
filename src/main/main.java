@@ -1,4 +1,4 @@
-/** @author AlejandroAcosta */
+//** @author AlejandroAcosta */
 public class main {
     public static void main(String[] args) {
         Pedido miPedido = new Pedido("Pepe Suarez");
