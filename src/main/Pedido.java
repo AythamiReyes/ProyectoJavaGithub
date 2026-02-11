@@ -49,7 +49,13 @@ public class Pedido {
     
     //** @author AlejandroAcosta */
     // Getters necesarios
-    public EstadoPedido getEstado() { return estado; }
-    public int getId() { return id;
+    public EstadoPedido getEstado() { 
+        return estado; 
+    }
+    public int getId() { 
+        return id;
+    }
+    public String getCliente() { 
+        return cliente; 
     }
 }
